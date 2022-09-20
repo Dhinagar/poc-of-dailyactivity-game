@@ -1,0 +1,63 @@
+info: Module: MockBatchServer
+info:   Checking for locked files
+info:   Taking Backup of Source
+info:      Copy Source for backup
+info:      Zip the Source
+info:      Cleanup
+info:   Release Main
+info:     Clean Release
+info:     Validate Source
+info:       Verifying: true: authservice.js
+info:       Verifying: true: connection.js
+info:       Verifying: true: dateTimeUtils.js
+info:       Verifying: true: index.js
+info:       Verifying: true: logger.js
+info:       Verifying: true: serverconfig.js
+info:       Verifying: true: batchProcess\constants.js
+info:       Verifying: true: batchProcess\helperFns.js
+info:       Verifying: true: batchProcess\index.js
+info:       Verifying: true: LogDump\index.js
+info:       Verifying: true: Services\fileTransfer.js
+info:       Verifying: true: Services\mailerV2.js
+info:       Verifying: true: batchProcess\LeasingProfessional\index.js
+info:       Verifying: true: batchProcess\LeasingServices\index.js
+info:       Verifying: true: batchProcess\WinnowPro\index.js
+info:       Verifying: true: batchProcess\LeasingProfessional\formService\formFields.js
+info:       Verifying: true: batchProcess\LeasingProfessional\formService\index.js
+info:       Verifying: true: batchProcess\WinnowPro\TextChatHistory\index.js
+info:       Verifying: true: batchProcess\WinnowPro\TextChatHistory\FaceBookChat\FaceBookChat.js
+info:       Verifying: true: batchProcess\WinnowPro\TextChatHistory\GoogleMessagesChat\GoogleMessagesChat.js
+info:       Verifying: true: batchProcess\WinnowPro\TextChatHistory\HandleDataPacket\HandleDataPacket.js
+info:       Verifying: true: batchProcess\WinnowPro\TextChatHistory\WebChat\WebChat.js
+info:       Verifying: true: batchProcess\WinnowPro\TextChatHistory\WhatsappChat\WhatsappChat.js
+info:     Release Source
+info:   Revert uncommited changes in Working Copy
+info:   Perform an Update of Working Copy
+info:     Clean Temp Working Copy
+info:     Merge Latest Working Copy with Local Copy
+info:       Copy Working Copy To Temp Working Copy
+info:       Copy Release To Temp Working Copy
+info:       Update Source
+info:       Differences in Temp Working Copy
+info:         modified: ./batchProcess/LeasingServices/index.js
+info:         modified: ./batchProcess/WinnowPro/index.js
+info:     Clean Working Copy
+info:       Clean Source
+info:       Clean Enabler
+info:     Copy Temp Working Copy To Working Copy
+info:     Prepare checkout of Enablers
+info:     Checkout Enablers from Repo into Working Copy
+info:     Clean Temp Working Copy
+info:   Commit Working Copy
+info:     Update Working Copy
+info:       Update Source
+info:     Commit to repository
+info:     Commit Comments:
+
+api documentation done.
+
+info:       Commit Source
+info:   Copy Updated Source To Main
+info:     Clean Main Partially
+info:     Copy WC Source To Main
+info:     Copy Working Copy Enablers to Main

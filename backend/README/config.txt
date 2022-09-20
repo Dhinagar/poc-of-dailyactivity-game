@@ -1,0 +1,262 @@
+{
+	"serverPort": 2123,
+    "isHttps": false,
+	"mongoIP": "localhost",
+	"mongoDBName": "MockDB_DEV",
+	"mongoDBUserName": "",
+	"mongoDBPasswd": "",
+	"imageUrl":"https://core-mock-dev.intelli-assist.com:2023",
+	"serverUrl": "https://core-dev.intelli-assist.com:5063",
+	"callCenterServerUrl":"https://core-callcenter-dev.intelli-assist.com:1063",
+	"MockWebServer":"https://core-management-mock-dev.intelli-assist.com:2128",
+	"InsightEngineUrl":"https://core-insightengine-dev.intelli-assist.com:9093",
+	"MainServerAuthDetails": {
+		"userId": "mock",
+        "token": "153485678017350"
+	},
+	"auth":{
+		"isAuthenticationRequired":true,
+        "defaultAdmin":{
+			"username":"ADMIN",
+			"password":"ADMIN123",
+			"type": "ADMIN"
+		},
+        "business_cloud": {
+			"LEASINGPROFESSIONAL":{
+				"routes":["/LeasingProfessional/"]
+			},
+			"SYSTEMAPI":{
+				"routes":["/log/"]
+			}
+        },
+        "users": [
+    	    {
+				"username": "LEASINGPROFESSIONAL",
+				"password": "KERU8942FD",
+				"type": "SERVER",
+				"business_clouds": ["LEASINGPROFESSIONAL"]
+			},
+	   		{
+				"username": "MOCK_SERVER",
+				"password": "MFQO432F35",
+				"type": "SERVER",
+				"business_clouds": ["SYSTEMAPI"]
+			},
+	   		{
+				"username": "PARENT_SERVER",
+				"password": "MWFO41HX37",
+				"type": "SERVER",
+				"business_clouds": ["SYSTEMAPI"]
+			}
+        ]
+    },
+	"CallcenterAuthDetails":{
+	    "username":"MOCK_SERVER",
+	    "passsword":"RNJ3ns7c"
+    },
+	"InsightEngineAuthDetails":{
+	    "username":"MOCK_SERVER",
+	    "passsword":"MFCO432F32"
+    },
+	"mailEnabled": false,
+	"mailSMTPServerPort": 80,
+	"mailSMTPServer": "smtpout.secureserver.net",
+	"mailFromAddress": "support@intelli-assist.com",
+	"mailUsername": "support@intelli-assist.com",
+	"mailPassword": "Support@123",
+	"collectionNames": {
+		"WinnowProVehiclesStore": "WinnowProVehiclesStore",
+		"WinnowProColors": "WinnowProColors",
+		"WinnowProMakes": "WinnowProMakes",
+		"WinnowProModels": "WinnowProModels",
+		"WinnowProTrims": "WinnowProTrims",
+		"WinnowProBodyTypes": "WinnowProBodyTypes",
+		"WinnowProVehicleTypes": "WinnowProVehicleTypes",
+		"WinnowProDriveTrain": "WinnowProDriveTrain",
+		"WinnowProStockImages": "WinnowProStockImages",
+		"WinnowProOffers": "WinnowProOffers",
+		"WinnowProBaseColors": "WinnowProBaseColors",
+		"WinnowProFeatures": "WinnowProFeatures",
+		"WinnowProSynonyms": "WinnowProSynonyms",
+		"WinnowProDealerLogos": "WinnowProDealerLogos",
+		"WinnowProAnalyticCollection": "WinnowProAnalytics",
+		"WinnowProModelVariancesCollection":"WinnowProModelVariances"
+	},
+	"ClientApis":{
+		"WinnowPro": {
+			"isBatchProcessRequired": true,
+			"isBatchProcessCreateLead":true,
+			"sftpCredentials": {
+				"host": "s-e68d83f6ad97410c8.server.transfer.us-east-1.amazonaws.com",
+				"port": "22",
+				"username": "almawiz",
+				"password": "ODKp0M$#XTOX9F@6w2MrNC%LAzE6e%Eh"
+			},
+			"mockServerCredentials": {
+                "username": "WINNOWPRO",
+				"password": "BNYS4742LKD"
+			},
+			"vehiclesLocation": "/winnow-sftp/almawiz/all_dealers_prod.json",
+			"RunTime":"*/10 * * * *",
+			"leadEmailSentRuntime":"*/2 * * * *",
+			"spanTime": "5",
+			"users": [
+				{
+					"name": "winnowpro",
+					"password": "winnowpro123"
+				}
+			],
+			"JWTSecret": "QSADASDASDBNN123123123SASDATEHNDLHGadfasdf"
+		},
+		"LeasingProfessional":{
+			"isBatchProcessRequired":true,
+			"RunTime":"0 1 */1 * *",
+			"api_key":"00f18801-1a2e-40a0-857e-1a8ec7dce26d",
+			"formName":"Leasing Professional(DEV)"
+		},
+		"LPA":{
+			"isSMSSent":false,
+			"ignorePhoneNumberPrefix": "^\\+910000",
+			"testCaseId":"T 1",
+			"isDailyRunRequired":true,
+		    "DailyRunTime":"*/2 * * * *",
+			"Unit":"Minutes",
+			"corporate": "ALMAwizDev",
+			"SFTP":{
+				"isSFTPProcessRequired":true,
+                "RunTime":"*/1 * * * *"
+		    },
+			"ContractRenewal":{
+	            "isContractRenewalProcessRequired":true,
+				"interval":2,
+			    "message":{
+                    "English":"Hi <%name>. We hope you are enjoying your living experience at <%apartment>. your contract is almost coming to an end. Please click on the below link to proceed with the renewal process  <%url> . ",
+					"Spanish":"Hola, <%name>. Esperamos que esté disfrutando de su experiencia de vida en <%apartment>. su contrato está llegando a su fin. Haga clic en el enlace a continuación para continuar con el proceso de renovación   <%url> . "
+				},
+				"pageId":"Renewal"
+			},
+			"CustomerReview":{
+				"isCustomerReviewProcessRequired":true,
+				"ReviewConfig":[
+					{
+						"pageId":"ReviewOne", 
+						"interval":6, 
+						"reviewId":"Feedback1",
+						"message":{
+                            "English":"Hi <%name>.  We hope you have moved in well and would love to know about your move in experience! Please click on the link <%url> to answer two quick questions. ",
+					        "Spanish":"Hola, <%name>. Esperamos que se haya mudado bien y nos encantaría conocer su experiencia de mudanza. Haga clic en el enlace <%url> para responder dos preguntas rápidas. "
+				        },
+						"toSend": true
+					}, 
+					{
+						"pageId":"ReviewOne", 
+						"interval":9, 
+						"reviewId":"Feedback2",
+						"message":{
+                            "English":"Hi <%name>.  We hope you are enjoying your living experience at <%apartment>.  Please click on the link <%url> to answer two quick questions. ",
+					        "Spanish":"Hola <%name>. Esperamos que esté disfrutando de su experiencia de vida en <%apartment>. Haga clic en el enlace <%url> para responder dos preguntas rápidas. "
+				        },
+						"toSend": true
+					},
+					{
+						"pageId":"ReviewOne", 
+						"interval":10, 
+						"reviewId":"Feedback3",
+						"message":{
+                            "English":"Hi <%name>.  We hope you are enjoying your living experience at <%apartment>.  Please click on the link <%url> to answer two quick questions. ",
+					        "Spanish":"Hola <%name>. Esperamos que esté disfrutando de su experiencia de vida en <%apartment>. Haga clic en el enlace <%url> para responder dos preguntas rápidas. "
+				        },
+						"toSend": true
+					},
+					{
+						"pageId":"ReviewOne", 
+						"interval":11, 
+						"reviewId":"Feedback4",
+						"message":{
+                            "English":"Hi <%name>.  We hope you are enjoying your living experience at <%apartment>.  Please click on the link <%url> to answer two quick questions. ",
+					        "Spanish":"Hola <%name>. Esperamos que esté disfrutando de su experiencia de vida en <%apartment>. Haga clic en el enlace <%url> para responder dos preguntas rápidas. "
+				        },
+						"toSend": true
+					},
+					{
+						"pageId":"ReviewOne", 
+						"interval":13, 
+						"reviewId":"Feedback5",
+						"message":{
+                            "English":"Hi <%name>.  We hope you are enjoying your living experience at <%apartment>.  Please click on the link <%url> to answer two quick questions. ",
+					        "Spanish":"Hola <%name>. Esperamos que esté disfrutando de su experiencia de vida en <%apartment>. Haga clic en el enlace <%url> para responder dos preguntas rápidas. "
+				        },
+						"toSend": true
+					},
+					{
+						"pageId":"ReviewOne", 
+						"interval":15, 
+						"reviewId":"Feedback6",
+						"message":{
+                            "English":"Hi <%name>.  We hope you are enjoying your living experience at <%apartment>.  Please click on the link <%url> to answer two quick questions. ",
+					        "Spanish":"Hola <%name>. Esperamos que esté disfrutando de su experiencia de vida en <%apartment>. Haga clic en el enlace <%url> para responder dos preguntas rápidas. "
+				        },
+						"toSend": true
+					}
+				]
+			},
+			"OnBoardSMS":{
+				"message":"Hi <%name>.  We wish you a warm welcome to <%apartment>. Please select your preferred language \n1. English\n2. Spanish. "
+				
+			},
+			"EmailToLM":{
+				"isEmailToBeSent":true,
+				"pageId":"LeasingManager"
+			},
+			"Escalate":{
+				"isEscalationRequired":true,
+				"interval":2,
+				"pageId":"Supervisor"
+			},
+			"GoogleReview":{
+			    "isGoogleReviewRequired":true,
+				"message":{
+                    "English":"Hi <%name>. Please click on the link below to give us a google review.  Your short review will greatly be appreciated <%url> . ",
+					"Spanish":"Hola, <%name>. Haga clic en el enlace a continuación para darnos una revisión de Google. Su breve reseña será muy apreciada <%url> . "
+				},
+				"pageURL":"/ServiceManagement/GoogleReview/v2",
+				"ReviewConfig":[
+					{
+						"interval":"9", 
+						"reviewId":"GoogleReview1",
+						"toSend": true
+					}, 
+					{
+						"interval":"10", 
+						"reviewId":"GoogleReview2",
+						"toSend": true
+					}, 
+					{
+						"interval":"12", 
+						"reviewId":"GoogleReview3",
+						"toSend": true
+					}, 
+					{
+						"interval":"14", 
+						"reviewId":"GoogleReview4",
+						"toSend": true
+					}
+				]	
+			},
+			"SnaglistSMS":{
+			    "isSnaglistSMSRequired":true,
+				"message":{
+					"English":"Hi <%name>. Please click on the link <%url> to an online form to notify us of any issues with the apartment.  Should we not receive any form will assume that there are no issues. ",
+					"Spanish":"Hola, <%name>. Haga clic en el enlace <%url> a un formulario en línea para notificarnos de cualquier problema con el apartamento. En caso de que no recibamos algún formulario asumiremos que no hay problemas. "
+				},
+				"ReviewConfig":[
+					{
+						"pageId":"SnagList", 
+						"interval":"3", 
+						"reviewId":"SnagListReview1"
+					}
+				]	
+			}
+		}
+	}
+}

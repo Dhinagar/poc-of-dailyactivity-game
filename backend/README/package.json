@@ -1,0 +1,39 @@
+{
+  "name": "dev-ops-gulp",
+  "version": "0.0.9",
+  "description": "Gulp for Devops for Developer",
+  "main": "gulp.js",
+  "scripts": {
+    "checkout-trunk": "gulp checkout-trunk",
+    "work-diff": "gulp work-diff",
+    "work-commit": "gulp work-commit",
+    "work-update": "gulp work-update",
+    "checkout-branch": "gulp checkout-branch",
+    "fwdMerge": "gulp fwdMerge",
+    "revMerge": "gulp revMerge"
+  },
+  "author": "Trudeau",
+  "license": "MIT",
+  "readmeFilename": "README.txt",
+  "dependencies": {
+    "async": "^2.6.1",
+    "cross-spawn": "^7.0.1",
+    "del": "^3.0.0",
+    "filecompare": "^1.0.4",
+    "gulp": "4.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-javascript-obfuscator": "^1.1.6",
+    "gulp-sync": "^0.1.4",
+    "gulp-zip": "^5.0.0",
+    "inquirer": "^7.0.0",
+    "node-svn-ultimate": "^1.1.0",
+    "properties-reader": "0.0.16",
+    "through2": "^3.0.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "gulp-babel": "^8.0.0"
+  }
+}
